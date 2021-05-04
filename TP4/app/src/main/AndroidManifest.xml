@@ -10,8 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TP4">
         <activity android:name=".InfoUrlActivity"></activity>
-        <activity android:name=".MainActivity"></activity>
-        <activity android:name=".ListeArticlesActivity">
+        <activity
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"
+            android:name=".MainActivity"></activity>
+        <activity
+            android:theme="@style/Theme.AppCompat.NoActionBar"
+            android:name=".ListeArticlesActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
