@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/textNom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Nom"/>
+    <EditText
+        android:id="@+id/nom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/textDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Description"/>
+    <EditText
+        android:id="@+id/description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/textPrix"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Prix"/>
+    <EditText
+        android:id="@+id/prix"
+        android:inputType="number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:text="Envie"
+        android:id="@+id/textDegreEnvie"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <RatingBar
+        android:id="@+id/degreEnvie"
+        android:layout_width="wrap_content"
+        android:stepSize="1"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/textUrl"
+        android:text="Url"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <EditText
+        android:id="@+id/url"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ajouter"
+        android:onClick="Ajouter"/>
+
+</LinearLayout>
