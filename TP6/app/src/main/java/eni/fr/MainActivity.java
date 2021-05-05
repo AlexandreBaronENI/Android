@@ -104,7 +104,7 @@ public class MainActivity extends AppCompatActivity {
 
                         ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.SEND_SMS}, 1);
 
-                        Log.i("Message envoyé", "Le message à bien été envoyé");
+                        Toast.makeText(this, "Le message à bien été envoyé !", Toast.LENGTH_LONG);
 
                     } catch (Exception e) {
                         e.printStackTrace();
