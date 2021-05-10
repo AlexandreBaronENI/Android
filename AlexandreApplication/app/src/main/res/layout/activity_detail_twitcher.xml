@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".DetailTwitcher">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/iv_profile_pic"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="50dp"
+            />
+
+        <TextView
+            android:id="@+id/tv_pseudo_twitcher"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bonjour"
+            android:layout_toRightOf="@+id/iv_profile_pic"
+            android:layout_alignTop="@+id/iv_profile_pic"
+            android:textSize="30dp"
+            android:paddingBottom="20dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_firstname_twitcher"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bonjour"
+            android:layout_alignBottom="@+id/tv_pseudo_twitcher"
+            android:layout_toRightOf="@+id/iv_profile_pic"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/tv_lastname_twitcher"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bonjour"
+            android:layout_alignBottom="@+id/tv_pseudo_twitcher"
+            android:layout_toRightOf="@+id/tv_firstname_twitcher"
+            android:layout_marginLeft="10dp"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/tv_nbsubs_twitcher"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_lastname_twitcher"
+            android:layout_toEndOf="@+id/tv_nbfollows_twitcher"
+            android:layout_toRightOf="@+id/tv_nbfollows_twitcher"
+            android:text="Bonjour"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/tv_nbfollows_twitcher"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_lastname_twitcher"
+            android:layout_toEndOf="@+id/iv_profile_pic"
+            android:layout_toRightOf="@+id/iv_profile_pic"
+            android:text="Bonjour"
+            android:textSize="20dp" />
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:background="@android:color/black"
+        android:layout_alignBottom="@+id/tv_firstname_twitcher"
+        />
+
+</LinearLayout>
