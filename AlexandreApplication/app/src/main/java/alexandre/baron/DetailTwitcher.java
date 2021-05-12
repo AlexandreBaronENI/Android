@@ -35,8 +35,6 @@ public class DetailTwitcher extends AppCompatActivity {
         pseudo.setText(twitcher.getPseudo());
         firstname.setText(twitcher.getFirstname());
         lastname.setText(twitcher.getLastname());
-        nbfollows.setText(twitcher.getFollows().size()+" follows");
-        nbsubs.setText(twitcher.getSubs().size()+ " subs");
         Picasso.get().load(twitcher.getProfilePicture()).into(profilepic);
     }
 }

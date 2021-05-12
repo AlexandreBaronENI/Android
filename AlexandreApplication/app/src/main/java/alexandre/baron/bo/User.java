@@ -3,38 +3,56 @@ package alexandre.baron.bo;
 import android.os.Parcel;
 import android.os.Parcelable;
 
+import androidx.room.ColumnInfo;
+import androidx.room.Embedded;
+import androidx.room.Entity;
+import androidx.room.PrimaryKey;
+import androidx.room.Relation;
+import androidx.room.TypeConverters;
+
 import java.util.Date;
 import java.util.List;
 
 import lombok.*;
 
+@Entity
 @NoArgsConstructor
 @AllArgsConstructor
 @Getter
 @Setter
-@Data public abstract class User implements Parcelable {
-    private int id;
+@Data public class User implements Parcelable {
+
+    @PrimaryKey(autoGenerate = true)
+    private long id;
     private String lastname;
     private String firstname;
     private String pseudo;
+    @TypeConverters(DateConverter.class)
     private Date dateBirth;
     private String password;
     private String mail;
-    private List<Twitcher> subs;
-    private List<Twitcher> follows;
     private String profilePicture;
 
     protected User(Parcel in) {
-        id = in.readInt();
         lastname = in.readString();
         firstname = in.readString();
         pseudo = in.readString();
         password = in.readString();
         mail = in.readString();
-        subs = in.createTypedArrayList(Twitcher.CREATOR);
-        follows = in.createTypedArrayList(Twitcher.CREATOR);
         profilePicture = in.readString();
     }
+
+    public static final Creator<User> CREATOR = new Creator<User>() {
+        @Override
+        public User createFromParcel(Parcel in) {
+            return new User(in);
+        }
+
+        @Override
+        public User[] newArray(int size) {
+            return new User[size];
+        }
+    };
 
     @Override
     public int describeContents() {
@@ -43,14 +61,11 @@ import lombok.*;
 
     @Override
     public void writeToParcel(Parcel dest, int flags) {
-        dest.writeInt(id);
         dest.writeString(lastname);
         dest.writeString(firstname);
         dest.writeString(pseudo);
         dest.writeString(password);
         dest.writeString(mail);
-        dest.writeTypedList(subs);
-        dest.writeTypedList(follows);
         dest.writeString(profilePicture);
     }
 }
